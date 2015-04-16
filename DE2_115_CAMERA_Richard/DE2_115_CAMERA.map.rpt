@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115_CAMERA
-Thu Apr 16 15:50:33 2015
+Thu Apr 16 16:55:11 2015
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
@@ -123,15 +123,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 16 15:50:33 2015       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 16 16:55:10 2015       ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
 ; Revision Name                      ; DE2_115_CAMERA                              ;
 ; Top-level Entity Name              ; DE2_115_CAMERA                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,973                                       ;
-;     Total combinational functions  ; 1,534                                       ;
-;     Dedicated logic registers      ; 1,146                                       ;
-; Total registers                    ; 1146                                        ;
+; Total logic elements               ; 2,004                                       ;
+;     Total combinational functions  ; 1,575                                       ;
+;     Dedicated logic registers      ; 1,154                                       ;
+; Total registers                    ; 1154                                        ;
 ; Total pins                         ; 428                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 57,400                                      ;
@@ -329,20 +329,20 @@ agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                  ;
 +---------------------------------------------+------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,973                                                                  ;
+; Estimated Total logic elements              ; 2,004                                                                  ;
 ;                                             ;                                                                        ;
-; Total combinational functions               ; 1534                                                                   ;
+; Total combinational functions               ; 1575                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                        ;
-;     -- 4 input functions                    ; 664                                                                    ;
-;     -- 3 input functions                    ; 382                                                                    ;
-;     -- <=2 input functions                  ; 488                                                                    ;
+;     -- 4 input functions                    ; 697                                                                    ;
+;     -- 3 input functions                    ; 398                                                                    ;
+;     -- <=2 input functions                  ; 480                                                                    ;
 ;                                             ;                                                                        ;
 ; Logic elements by mode                      ;                                                                        ;
-;     -- normal mode                          ; 1154                                                                   ;
-;     -- arithmetic mode                      ; 380                                                                    ;
+;     -- normal mode                          ; 1177                                                                   ;
+;     -- arithmetic mode                      ; 398                                                                    ;
 ;                                             ;                                                                        ;
-; Total registers                             ; 1146                                                                   ;
-;     -- Dedicated logic registers            ; 1146                                                                   ;
+; Total registers                             ; 1154                                                                   ;
+;     -- Dedicated logic registers            ; 1154                                                                   ;
 ;     -- I/O registers                        ; 0                                                                      ;
 ;                                             ;                                                                        ;
 ; I/O pins                                    ; 428                                                                    ;
@@ -355,8 +355,8 @@ agreement for further details.
 ;                                             ;                                                                        ;
 ; Maximum fan-out node                        ; sdram_pll:u6|altpll:altpll_component|altpll_f423:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 702                                                                    ;
-; Total fan-out                               ; 10256                                                                  ;
-; Average fan-out                             ; 2.74                                                                   ;
+; Total fan-out                               ; 10457                                                                  ;
+; Average fan-out                             ; 2.76                                                                   ;
 +---------------------------------------------+------------------------------------------------------------------------+
 
 
@@ -365,8 +365,8 @@ agreement for further details.
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                        ; Library Name ;
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_115_CAMERA                                              ; 1534 (1)          ; 1146 (14)    ; 57400       ; 1            ; 1       ; 0         ; 428  ; 0            ; |DE2_115_CAMERA                                                                                                                                                                            ; work         ;
-;    |CCD_Capture:u3|                                          ; 53 (53)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|CCD_Capture:u3                                                                                                                                                             ; work         ;
+; |DE2_115_CAMERA                                              ; 1575 (1)          ; 1154 (14)    ; 57400       ; 1            ; 1       ; 0         ; 428  ; 0            ; |DE2_115_CAMERA                                                                                                                                                                            ; work         ;
+;    |CCD_Capture:u3|                                          ; 54 (54)           ; 47 (47)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|CCD_Capture:u3                                                                                                                                                             ; work         ;
 ;    |I2C_CCD_Config:u8|                                       ; 265 (196)         ; 131 (93)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|I2C_CCD_Config:u8                                                                                                                                                          ; work         ;
 ;       |I2C_Controller:u0|                                    ; 69 (69)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|I2C_CCD_Config:u8|I2C_Controller:u0                                                                                                                                        ; work         ;
 ;    |RAW2RGB:u4|                                              ; 220 (205)         ; 120 (110)    ; 28728       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|RAW2RGB:u4                                                                                                                                                                 ; work         ;
@@ -381,10 +381,12 @@ agreement for further details.
 ;          |lpm_divide_uim:auto_generated|                     ; 89 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|RGB2Grey:u9|lpm_divide:Div0|lpm_divide_uim:auto_generated                                                                                                                  ; work         ;
 ;             |sign_div_unsign_mlh:divider|                    ; 89 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|RGB2Grey:u9|lpm_divide:Div0|lpm_divide_uim:auto_generated|sign_div_unsign_mlh:divider                                                                                      ; work         ;
 ;                |alt_u_div_07f:divider|                       ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|RGB2Grey:u9|lpm_divide:Div0|lpm_divide_uim:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_07f:divider                                                                ; work         ;
-;    |SEG7_LUT_8:u5|                                           ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5                                                                                                                                                              ; work         ;
+;    |SEG7_LUT_8:u5|                                           ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5                                                                                                                                                              ; work         ;
 ;       |SEG7_LUT:u0|                                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5|SEG7_LUT:u0                                                                                                                                                  ; work         ;
 ;       |SEG7_LUT:u1|                                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5|SEG7_LUT:u1                                                                                                                                                  ; work         ;
-;    |Sdram_Control:u7|                                        ; 696 (267)         ; 688 (157)    ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7                                                                                                                                                           ; work         ;
+;       |SEG7_LUT:u2|                                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5|SEG7_LUT:u2                                                                                                                                                  ; work         ;
+;       |SEG7_LUT:u3|                                          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|SEG7_LUT_8:u5|SEG7_LUT:u3                                                                                                                                                  ; work         ;
+;    |Sdram_Control:u7|                                        ; 700 (271)         ; 688 (157)    ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7                                                                                                                                                           ; work         ;
 ;       |Sdram_RD_FIFO:u_read1_fifo|                           ; 75 (0)            ; 106 (0)      ; 6656        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7|Sdram_RD_FIFO:u_read1_fifo                                                                                                                                ; work         ;
 ;          |dcfifo_mixed_widths:dcfifo_mixed_widths_component| ; 75 (0)            ; 106 (0)      ; 6656        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7|Sdram_RD_FIFO:u_read1_fifo|dcfifo_mixed_widths:dcfifo_mixed_widths_component                                                                              ; work         ;
 ;             |dcfifo_dih1:auto_generated|                     ; 75 (14)           ; 106 (27)     ; 6656        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7|Sdram_RD_FIFO:u_read1_fifo|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_dih1:auto_generated                                                   ; work         ;
@@ -456,7 +458,7 @@ agreement for further details.
 ;       |command:u_command|                                    ; 60 (60)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command                                                                                                                                         ; work         ;
 ;       |control_interface:u_control_interface|                ; 64 (64)           ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|Sdram_Control:u7|control_interface:u_control_interface                                                                                                                     ; work         ;
 ;    |VGA_Controller:u1|                                       ; 80 (80)           ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|VGA_Controller:u1                                                                                                                                                          ; work         ;
-;    |eqGrey:u10|                                              ; 41 (41)           ; 48 (48)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|eqGrey:u10                                                                                                                                                                 ; work         ;
+;    |eqGrey:u10|                                              ; 63 (63)           ; 56 (56)      ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|eqGrey:u10                                                                                                                                                                 ; work         ;
 ;       |lpm_mult:Mult0|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|eqGrey:u10|lpm_mult:Mult0                                                                                                                                                  ; work         ;
 ;          |mult_aat:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|eqGrey:u10|lpm_mult:Mult0|mult_aat:auto_generated                                                                                                                          ; work         ;
 ;    |sdram_pll:u6|                                            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115_CAMERA|sdram_pll:u6                                                                                                                                                               ; work         ;
@@ -607,12 +609,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1146  ;
+; Total registers                              ; 1154  ;
 ; Number of registers using Synchronous Clear  ; 141   ;
 ; Number of registers using Synchronous Load   ; 54    ;
 ; Number of registers using Asynchronous Clear ; 232   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 385   ;
+; Number of registers using Clock Enable       ; 393   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -660,24 +662,25 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|BA[1]                         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|control_interface:u_control_interface|timer[13] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|command_delay[6]              ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|senosr_exposure[7]                             ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|control_interface:u_control_interface|timer[12] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|command_delay[1]              ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|senosr_exposure[12]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|eqGrey:u10|const_C[2]                                            ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|SA[2]                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|CCD_Capture:u3|X_Cont[11]                                        ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|CCD_Capture:u3|Y_Cont[1]                                         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|rp_shift[1]                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|CCD_Capture:u3|X_Cont[2]                                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|CCD_Capture:u3|Y_Cont[15]                                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|command:u_command|rp_shift[2]                   ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|mADDR[20]                                       ;
-; 64:1               ; 5 bits    ; 210 LEs       ; 70 LEs               ; 140 LEs                ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|mI2C_DATA[3]                                   ;
+; 64:1               ; 5 bits    ; 210 LEs       ; 70 LEs               ; 140 LEs                ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|mI2C_DATA[11]                                  ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|CMD[1]                                          ;
-; 9:1                ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_CAMERA|RAW2RGB:u4|rRed[11]                                              ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|mRD                                             ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|mWR                                             ;
+; 9:1                ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_CAMERA|RAW2RGB:u4|rRed[7]                                               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|RD_MASK[0]                                      ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|WR_MASK[0]                                      ;
 ; 10:1               ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_CAMERA|RAW2RGB:u4|rBlue[2]                                              ;
-; 10:1               ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_CAMERA|RAW2RGB:u4|rGreen[1]                                             ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|ST[7]                                           ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0]                ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|eqGrey:u10|const_K[0]                                            ;
+; 10:1               ; 12 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |DE2_115_CAMERA|RAW2RGB:u4|rGreen[9]                                             ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_115_CAMERA|Sdram_Control:u7|ST[9]                                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_115_CAMERA|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[2]                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |DE2_115_CAMERA|eqGrey:u10|const_K[5]                                            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE2_115_CAMERA|I2C_CCD_Config:u8|Mux13                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
@@ -1825,16 +1828,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "eqGrey:u10"                                                                                                                                                                       ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; K_reading      ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (32 bits) it drives.  The 24 most-significant bit(s) in the port expression will be connected to GND. ;
-; oBlueEQ[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; oRedEQ[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-; oGreenEQ[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "eqGrey:u10"                                                                                                                                                                        ;
++----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                                                                                  ;
++----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; K_reading      ; Output ; Warning  ; Output or bidir port (20 bits) is smaller than the port expression (32 bits) it drives.  The 12 most-significant bit(s) in the port expression will be connected to GND. ;
+; oBlueEQ[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
+; oRedEQ[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
+; oGreenEQ[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
++----------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2020,11 +2023,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 428                         ;
-; cycloneiii_ff         ; 1146                        ;
+; cycloneiii_ff         ; 1154                        ;
 ;     CLR               ; 74                          ;
 ;     CLR SCLR          ; 23                          ;
 ;     CLR SLD           ; 16                          ;
-;     ENA               ; 210                         ;
+;     ENA               ; 218                         ;
 ;     ENA CLR           ; 87                          ;
 ;     ENA CLR SCLR      ; 32                          ;
 ;     ENA SCLR          ; 46                          ;
@@ -2034,24 +2037,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 26                          ;
 ;     plain             ; 582                         ;
 ; cycloneiii_io_obuf    ; 106                         ;
-; cycloneiii_lcell_comb ; 1537                        ;
-;     arith             ; 380                         ;
+; cycloneiii_lcell_comb ; 1580                        ;
+;     arith             ; 398                         ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 247                         ;
-;         3 data inputs ; 129                         ;
-;     normal            ; 1157                        ;
+;         2 data inputs ; 251                         ;
+;         3 data inputs ; 143                         ;
+;     normal            ; 1182                        ;
 ;         0 data inputs ; 27                          ;
-;         1 data inputs ; 39                          ;
-;         2 data inputs ; 174                         ;
-;         3 data inputs ; 253                         ;
-;         4 data inputs ; 664                         ;
+;         1 data inputs ; 42                          ;
+;         2 data inputs ; 161                         ;
+;         3 data inputs ; 255                         ;
+;         4 data inputs ; 697                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 92                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 29.70                       ;
-; Average LUT depth     ; 4.48                        ;
+; Average LUT depth     ; 4.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2060,7 +2063,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2070,7 +2073,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Thu Apr 16 15:50:17 2015
+    Info: Processing started: Thu Apr 16 16:54:56 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115_CAMERA -c DE2_115_CAMERA
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file sdram_control/command.v
@@ -2115,7 +2118,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file de2_115
     Info (12023): Found entity 1: DE2_115_CAMERA
 Info (12021): Found 1 design units, including 1 entities, in source file v/rgb2grey.v
     Info (12023): Found entity 1: RGB2Grey
-Warning (10261): Verilog HDL Event Control warning at eqGrey.v(58): Event Control contains a complex event expression
+Warning (10261): Verilog HDL Event Control warning at eqGrey.v(59): Event Control contains a complex event expression
 Info (12021): Found 1 design units, including 1 entities, in source file v/eqgrey.v
     Info (12023): Found entity 1: eqGrey
 Warning (10236): Verilog HDL Implicit Net warning at DE2_115_CAMERA.v(483): created implicit net for "VGA_CTRL_CLK"
@@ -2532,11 +2535,13 @@ Warning (10230): Verilog HDL assignment warning at VGA_Controller.v(227): trunca
 Info (12128): Elaborating entity "RGB2Grey" for hierarchy "RGB2Grey:u9"
 Warning (10230): Verilog HDL assignment warning at RGB2Grey.v(37): truncated value with size 32 to match size of target (14)
 Info (12128): Elaborating entity "eqGrey" for hierarchy "eqGrey:u10"
-Warning (10230): Verilog HDL assignment warning at eqGrey.v(47): truncated value with size 20 to match size of target (12)
 Warning (10230): Verilog HDL assignment warning at eqGrey.v(48): truncated value with size 20 to match size of target (12)
 Warning (10230): Verilog HDL assignment warning at eqGrey.v(49): truncated value with size 20 to match size of target (12)
-Warning (10230): Verilog HDL assignment warning at eqGrey.v(64): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at eqGrey.v(78): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at eqGrey.v(50): truncated value with size 20 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at eqGrey.v(65): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at eqGrey.v(73): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at eqGrey.v(87): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at eqGrey.v(95): truncated value with size 32 to match size of target (8)
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[31]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[30]" is missing source, defaulting to GND
@@ -2550,18 +2555,6 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[22]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[21]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[20]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[19]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[18]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[17]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[16]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[15]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[14]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[13]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[12]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[11]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[10]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[9]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[8]" is missing source, defaulting to GND
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[31]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[30]" is missing source, defaulting to GND
@@ -2575,18 +2568,6 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[22]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[21]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[20]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[19]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[18]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[17]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[16]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[15]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[14]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[13]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[12]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[11]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[10]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[9]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[8]" is missing source, defaulting to GND
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[31]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[30]" is missing source, defaulting to GND
@@ -2600,18 +2581,6 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[22]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[21]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[20]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[19]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[18]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[17]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[16]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[15]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[14]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[13]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[12]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[11]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[10]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[9]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[8]" is missing source, defaulting to GND
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[31]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[30]" is missing source, defaulting to GND
@@ -2625,18 +2594,6 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[22]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[21]" is missing source, defaulting to GND
     Warning (12110): Net "Frame_Cont[20]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[19]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[18]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[17]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[16]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[15]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[14]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[13]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[12]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[11]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[10]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[9]" is missing source, defaulting to GND
-    Warning (12110): Net "Frame_Cont[8]" is missing source, defaulting to GND
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Sdram_Control:u7|Sdram_RD_FIFO:u_read2_fifo|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_dih1:auto_generated|altsyncram_sj31:fifo_ram|q_b[0]"
@@ -2758,20 +2715,6 @@ Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SMA_CLKOUT" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND
-    Warning (13410): Pin "HEX2[2]" is stuck at GND
-    Warning (13410): Pin "HEX2[3]" is stuck at GND
-    Warning (13410): Pin "HEX2[4]" is stuck at GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC
-    Warning (13410): Pin "HEX3[0]" is stuck at GND
-    Warning (13410): Pin "HEX3[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[2]" is stuck at GND
-    Warning (13410): Pin "HEX3[3]" is stuck at GND
-    Warning (13410): Pin "HEX3[4]" is stuck at GND
-    Warning (13410): Pin "HEX3[5]" is stuck at GND
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC
     Warning (13410): Pin "HEX4[0]" is stuck at GND
     Warning (13410): Pin "HEX4[1]" is stuck at GND
     Warning (13410): Pin "HEX4[2]" is stuck at GND
@@ -2952,19 +2895,19 @@ Warning (21074): Design contains 50 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "IRDA_RXD"
     Warning (15610): No output dependent on input pin "FL_RY"
     Warning (15610): No output dependent on input pin "D5M_STROBE"
-Info (21057): Implemented 2530 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2561 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 88 input pins
     Info (21059): Implemented 234 output pins
     Info (21060): Implemented 106 bidirectional pins
-    Info (21061): Implemented 2008 logic cells
+    Info (21061): Implemented 2039 logic cells
     Info (21064): Implemented 92 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 468 warnings
-    Info: Peak virtual memory: 687 megabytes
-    Info: Processing ended: Thu Apr 16 15:50:33 2015
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 408 warnings
+    Info: Peak virtual memory: 686 megabytes
+    Info: Processing ended: Thu Apr 16 16:55:11 2015
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

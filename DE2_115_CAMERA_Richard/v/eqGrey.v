@@ -27,23 +27,24 @@ input  [11:0] 	iGreenRGB;
 output [11:0]  oBlueEQ;
 output [11:0]  oRedEQ;
 output [11:0]  oGreenEQ;
-output [7:0]	K_reading;
+output [19:0]	K_reading;
 
 reg [35:0]		toRGB_output;
 reg [19:0]  	sOut;
 reg [7:0] 		const_K, const_C;
 
+
 assign oBlueEQ = toRGB_output[35:24];
 assign oRedEQ = toRGB_output[23:12];
 assign oGreenEQ = toRGB_output[11:0];
 
-assign K_reading = const_K;
+assign K_reading = {const_K,const_C};
 
 always@(posedge iCLK)
 begin
 if(GREY_mode_SW)
 begin
-	sOut <= iGreenRGB[11:4]*const_K;
+	sOut <= iGreenRGB[11:4]*const_K + const_C;
 	toRGB_output[35:24] 	<= sOut;
 	toRGB_output[23:12] 	<= sOut;
 	toRGB_output[11:0] 	<= sOut;
@@ -67,6 +68,14 @@ begin
 		begin
 		//to end if statement
 		end
+		if(const_mode_SW)
+		begin
+			const_C <= const_C-1; 
+		end
+		else
+		begin
+		//to end if statement
+		end
 	end
 	else
 	begin
@@ -76,6 +85,14 @@ begin
 		if(!const_mode_SW)
 		begin
 			const_K <= const_K+ 1; 			
+		end
+		else
+		begin
+		//to end if statement
+		end
+		if(const_mode_SW)
+		begin
+			const_C <= const_C+ 1; 			
 		end
 		else
 		begin
