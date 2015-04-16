@@ -42,46 +42,49 @@ assign K_reading = const_K;
 always@(posedge iCLK)
 begin
 if(GREY_mode_SW)
-	begin
-		if(sOut <= 8'd255)
-			begin
-				toRGB_output[35:24] 	<= sOut[13:2];
-				toRGB_output[23:12] 	<= sOut[13:2];
-				toRGB_output[11:0] 	<= sOut[13:2];
-			end
-		else if(sOut > 8'd255)
-			begin
-				toRGB_output[35:24] 	<= sOut[18:7];
-				toRGB_output[23:12] 	<= sOut[18:7];
-				toRGB_output[11:0] 	<= sOut[18:7];
-			end
-	end
-else
-	begin
-		toRGB_output[35:24] 	<= iBlueRGB;
-		toRGB_output[23:12] 	<= iRedRGB;
-		toRGB_output[11:0] 	<= iGreenRGB;
-	end
+begin
+	sOut <= iGreenRGB[11:4]*const_K;
+	toRGB_output[35:24] 	<= sOut;
+	toRGB_output[23:12] 	<= sOut;
+	toRGB_output[11:0] 	<= sOut;
 end
-
-
+else
+begin
+	toRGB_output[35:24] 	<= iBlueRGB;
+	toRGB_output[23:12] 	<= iRedRGB;
+	toRGB_output[11:0] 	<= iGreenRGB;
+end
+end
 always@(negedge inc_dec_KEY && EQ_mode_SW)
 begin
-	if(!inc_dec_KEY)
+	if(!inc_dec_KEY && !const_SW)
 	begin
 		if(!const_mode_SW)
 		begin
-			const_K <= const_K+ 8'b00000001;
+			const_K <= const_K-1; 
+		end
+		else
+		begin
+		//to end if statement
 		end
 	end
-	else if(!inc_dec_KEY && const_SW)
+	else
+	begin
+	end
+	if(!inc_dec_KEY && const_SW)
 	begin
 		if(!const_mode_SW)
 		begin
-			const_K <= const_K-1;
-			
+			const_K <= const_K+ 1; 			
+		end
+		else
+		begin
+		//to end if statement
 		end
 	end
-	sOut <= iRedRGB * const_K;
+	else
+	begin
+	//to end if statement
+	end
 end
 endmodule
